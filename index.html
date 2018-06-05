@@ -1,0 +1,60 @@
+<!-- https://jav90.github.io/RPS-Multiplayer/ -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>RPS</title>
+    <!-- Firebase Reference -->
+  <script src="https://www.gstatic.com/firebasejs/4.12.0/firebase.js"></script>
+</head>
+<body>
+    <!-- Main body section -->
+    <section class="main">
+        <!-- Section for the input box that asks for the name -->
+        <div class="startName">
+            <!-- Form where the name is inputted -->
+            <form action="#">
+                Name: <input type="text" name="fname" class="name">
+                <input type="submit" value="Join" class="joinButton">
+            </form>
+        </div>
+        <!-- Section with all of player 1's information -->
+        <section class="player1">
+            <h1 class="player1name">Player 1</h1>
+            <!-- RPS choices; initially hidden -->
+            <div class="player1choice" hidden>
+                <form method="get" class="player1form">
+                    <input type="radio" name="option1" value="rock"> Rock<br>
+                    <input type="radio" name="option1" value="paper"> Paper<br>
+                    <input type="radio" name="option1" value="scissors"> Scissors<br>
+                    <input type="submit" value="Submit" class="choiceButton">
+                </form>
+            </div>
+        </section>
+        <!-- Section for player 2's information -->
+        <section class="player2">
+            <h1 class="player2name">Player 2</h1>
+            <div class="player2choice" hidden>
+                <!-- RPS chocies; initially hidden -->
+                <form method="get" class="player2form">
+                    <input type="radio" name="option2" value="rock"> Rock<br>
+                    <input type="radio" name="option2" value="paper"> Paper<br>
+                    <input type="radio" name="option2" value="scissors"> Scissors<br>
+                    <input type="submit" value="Submit" class="choiceButton">
+                </form>
+            </div>
+        </section>
+    </section>
+    <section class="result" hidden>
+        <h1 class="winner"></h1>
+    </section>
+    
+    <script
+        src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+        crossorigin="anonymous"></script>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
